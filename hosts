@@ -1,2 +1,5 @@
+[local]
+localhost    ansible_connection=local
+
 [nodes]
-192.168.91.11
+192.168.91.11   ansible_connection=SSH    ansible_user=ansible
