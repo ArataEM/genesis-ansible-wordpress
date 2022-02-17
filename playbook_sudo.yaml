@@ -1,0 +1,6 @@
+- hosts: nodes
+  remote_user: ansible
+  become: true
+  tasks:
+    - import_tasks: tasks/install_docker.yaml
+    - import_tasks: tasks/install_docker_compose.yaml

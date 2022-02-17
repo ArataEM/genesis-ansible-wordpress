@@ -1,0 +1,22 @@
+  - name: Install Docker Module for Python
+    pip:
+      name:
+        - docker
+        - docker-compose
+  
+  - name: Copy docker-compose.yaml
+    copy:
+      src: wordpress
+      dest: .
+
+  - name: Tear down existing services
+    docker_compose:
+      project_src: wordpress
+      state: absent
+
+  - name: Create and start services
+    docker_compose:
+      project_src: wordpress
+      state: present
+    register: output
+    
