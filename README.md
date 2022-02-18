@@ -48,6 +48,6 @@ Where:
 After configuration you can deploy Wordpress to remote host with command:
 
 ```shell
-$ ansible-playbook playbook_local.yaml -K
+$ ansible-playbook playbook_node.yaml -K
 ```
 
